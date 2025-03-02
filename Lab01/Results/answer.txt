@@ -1,6 +1,9 @@
 6. Exercise:
 
 6.1 Write, compile and run the ChoosingOption program:
+
+- 
+
 * Question:
 
 - What happens users choose "Cancel"?
@@ -28,4 +31,5 @@ Tuy nhiên, trong đoạn mã trên chỉ có hai lựa chọn được xử lý
 Lab01/Code/ChoosingOptionFix2.java
 
 6.2 Write a program for input/output from keyboard
+
 
