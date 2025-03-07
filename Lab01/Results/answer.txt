@@ -5,12 +5,35 @@
 -  Đoạn code được lưu trong file:
 Lab01/Code/HelloWorld.java
 
+- Kết quả thu được được lưu trong file:
+Lab01/Results/Results.docx
+
+2.2.2 Write, compile the first dialog Java program
+
+- Đoạn code được lưu trong file:
+Lab01/Code/FirstDialog.java
+
+- Kết quả thu được được lưu trong file:
+Lab01/Results/Results.docx
+
+2.2.3 Write, compile the first input dialog Java application:
+
+- Đoạn code được lưu trong file:
+Lab01/Code/HelloNameDialog.java
+
+- Kết quả thu được được lưu trong file:
+Lab01/Results/Results.docx
+
+
 6. Exercise:
 
 6.1 Write, compile and run the ChoosingOption program:
 
 - Đoạn code sau khi sửa được lưu trong file:
 Lab01/Code/ChoosingOption.java
+
+- Kết quả thu được được lưu trong file:
+Lab01/Results/Results.docx
 
 * Question:
 
@@ -31,12 +54,21 @@ Tuy nhiên, trong đoạn mã trên chỉ có hai lựa chọn được xử lý
 +, Đoạn code sau khi sửa hiện hai options "Yes" và "No" được lưu trong file:
  Lab01/Code/ChoosingOptionFix1.java
 
++, Kết quả thu được được lưu trong file:
+Lab01/Results/Results.docx
+
 +, Mô tả:
 > Dùng JOptionPane.YES_NO_OPTION chỉ để hiển thị hai options: "Yes" và "No".
 > "Select an Option" là tiêu đề của hộp thoại.
 
 +, Đoạn code sau khi sửa hiện hai options "I do" và "I don't": được lưu trong file:
 Lab01/Code/ChoosingOptionFix2.java
+
++, Kết quả thu được được lưu trong file:
+Lab01/Results/Results.docx
+
++, Mô tả:
+> options là một mảng chứa hai tùy chọn tùy chỉnh "I do" và "I don’t" thay vì mặc định "Yes" và "No" của JOptionPane.
 
 6.2 Write a program for input/output from keyboard
 
