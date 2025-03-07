@@ -24,6 +24,14 @@ Lab01/Code/HelloNameDialog.java
 - Kết quả thu được được lưu trong file:
 Lab01/Results/Results.docx
 
+2.2.4 Write, compile, and run the following example:
+
+- Đoạn code được lưu trong file:
+Lab01/Code/ShowTwoNumbers.java
+
+- Kết quả thu được được lưu trong file:
+Lab01/Results/Results.docx
+
 
 6. Exercise:
 
@@ -51,7 +59,7 @@ Tuy nhiên, trong đoạn mã trên chỉ có hai lựa chọn được xử lý
 
 - How to customize the options to users, e.g. only two options: “Yes” and “No”, OR “I do” and “I don’t” (Suggestion: Use Javadocs or using Eclipse/Netbean IDE help).
 
-+, Đoạn code sau khi sửa hiện hai options "Yes" và "No" được lưu trong file:
++ Đoạn code sau khi sửa hiện hai options "Yes" và "No" được lưu trong file:
  Lab01/Code/ChoosingOptionFix1.java
 
 +, Kết quả thu được được lưu trong file:
@@ -61,7 +69,7 @@ Lab01/Results/Results.docx
 > Dùng JOptionPane.YES_NO_OPTION chỉ để hiển thị hai options: "Yes" và "No".
 > "Select an Option" là tiêu đề của hộp thoại.
 
-+, Đoạn code sau khi sửa hiện hai options "I do" và "I don't": được lưu trong file:
++ Đoạn code sau khi sửa hiện hai options "I do" và "I don't": được lưu trong file:
 Lab01/Code/ChoosingOptionFix2.java
 
 +, Kết quả thu được được lưu trong file:
@@ -71,4 +79,3 @@ Lab01/Results/Results.docx
 > options là một mảng chứa hai tùy chọn tùy chỉnh "I do" và "I don’t" thay vì mặc định "Yes" và "No" của JOptionPane.
 
 6.2 Write a program for input/output from keyboard
-
