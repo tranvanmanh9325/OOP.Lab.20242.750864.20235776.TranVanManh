@@ -32,6 +32,13 @@ Lab01/Code/ShowTwoNumbers.java
 - Kết quả thu được được lưu trong file:
 Lab01/Results/Results.docx
 
+2.2.5 Write a program to calculate sum, difference, product, and quotient of 2 double numbers which are entered by users.
+
+- Đoạn code được lưu trong file:
+Lab01/Code/Calculator.java
+
+- Kết quả thu được được lưu trong file:
+Lab01/Results/Results.docx
 
 6. Exercise:
 
