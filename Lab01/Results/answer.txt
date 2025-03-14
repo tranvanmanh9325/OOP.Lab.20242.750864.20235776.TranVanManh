@@ -2,12 +2,6 @@
 
 6.1 Write, compile and run the ChoosingOption program:
 
-- Đoạn code sau khi sửa được lưu trong file:
-Lab01/Code/ChoosingOption.java
-
-- Kết quả thu được được lưu trong file:
-Lab01/Results/Results.docx
-
 * Question:
 
 - What happens users choose "Cancel"?
@@ -42,5 +36,3 @@ Lab01/Results/Results.docx
 
 +, Mô tả:
 > options là một mảng chứa hai tùy chọn tùy chỉnh "I do" và "I don’t" thay vì mặc định "Yes" và "No" của JOptionPane.
-
-6.2 Write a program for input/output from keyboard
