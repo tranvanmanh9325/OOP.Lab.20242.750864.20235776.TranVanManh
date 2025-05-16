@@ -1,0 +1,57 @@
+1. What happens if users choose “Cancel”?
+- Nếu chọn "Cancel", chương trình sẽ không chạy vì Eclipse yêu cầu lưu các thay đổi trước khi chạy ứng dụng. Khi nhấn "Cancel", cửa sổ "Save and Launch" sẽ đóng lại mà không lưu tệp, do đó chương trình sẽ không được thực thi.
+
+2. How to customize the options to users, e.g. only two options: “Yes” and “No”, OR “I do” 
+and “I don’t” (Suggestion: Use Javadocs or using Eclipse/Netbean IDE help). 
+- Sử dụng JOptionPane trong Java để tùy chỉnh các tùy chọn của hộp thoại.
+  Trong các ví dụ trong slide, có ví dụ về việc sử dụng JOptionPane, dựa vào ví dụ, ta có thể tạo ra các hộp thoại tùy chọn mới
+
+* Cách tạo hộp thoại với 2 lựa chọn "Yes" và "No":
+
+import javax.swing.JOptionPane;
+
+public class CustomDialog {
+    public static void main(String[] args) {
+        int choice = JOptionPane.showOptionDialog(
+            null, 
+            "Do you want to continue?", 
+            "Choose an option", 
+            JOptionPane.YES_NO_OPTION, 
+            JOptionPane.QUESTION_MESSAGE, 
+            null, 
+            new String[]{"Yes", "No"},  // Tùy chỉnh nút
+            "Yes" // Nút mặc định
+        );
+
+        if (choice == 0) {
+            System.out.println("User selected Yes");
+        } else {
+            System.out.println("User selected No");
+        }
+    }
+}
+
+* Cách tạo hộp thoại với các tùy chọn "I do" và "I don't":
+
+import javax.swing.JOptionPane;
+
+public class CustomDialog {
+    public static void main(String[] args) {
+        int choice = JOptionPane.showOptionDialog(
+            null, 
+            "Do you agree?", 
+            "Custom Options", 
+            JOptionPane.YES_NO_OPTION, 
+            JOptionPane.QUESTION_MESSAGE, 
+            null, 
+            new String[]{"I do", "I don't"},  // Tùy chỉnh nút
+            "I do" // Nút mặc định
+        );
+
+        if (choice == 0) {
+            System.out.println("User selected: I do");
+        } else {
+            System.out.println("User selected: I don't");
+        }
+    }
+}

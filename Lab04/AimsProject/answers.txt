@@ -1,0 +1,11 @@
+1. Compare the top-level containers in Swing and AWT
+
+AWT uses top-level containers like Frame, Dialog, and Panel. These are heavyweight components that rely on the operating system's native GUI resources. In contrast, Swing uses JFrame, JDialog, and JPanel as its top-level containers. Swing components are lightweight, meaning they are written entirely in Java and do not depend on the native system. This allows Swing to offer a more consistent look and feel across platforms and better flexibility in design.
+
+2. Compare the class name of components in AWT and the corresponding class’s name in Swing
+
+In AWT, component class names are simple and do not have any prefixes—for example, Button, Label, and TextField. In Swing, the class names for similar components begin with the letter "J", such as JButton, JLabel, and JTextField. While both sets of components serve similar purposes, Swing components are more powerful and support more features, such as custom rendering and tooltips.
+
+3. Compare the event-handling of Swing and AWT applications
+
+Both Swing and AWT use the same event-handling mechanism based on the delegation event model. This means that components generate events, and listeners (like ActionListener, MouseListener, etc.) are used to handle them. However, Swing provides more flexibility in handling events. For example, Swing components support additional event types and offer features like anonymous inner classes and lambda expressions (from Java 8 onward), making the code cleaner and more manageable compared to older AWT applications.
