@@ -1,0 +1,23 @@
+Lab 05
+The Aims class must be updated to handle any exceptions generated when the play() methods are called. 
+What happens when you don’t update for them to catch?
+
+`PlayerException` là một **checked exception** vì nó kế thừa trực tiếp từ lớp `java.lang.Exception` (chứ không phải `RuntimeException`). Điều này có nghĩa là trình biên dịch Java sẽ thực thi một quy tắc nghiêm ngặt: bất kỳ phương thức nào có thể ném ra `PlayerException` (như `play()` trong các lớp `DigitalVideoDisc`, `CompactDisc`, hoặc `Track`) đều phải được xử lý rõ ràng. Có hai cách để xử lý: 
+- **Bắt ngoại lệ bằng try-catch**: Đặt đoạn code gọi `play()` trong một khối `try` và sử dụng `catch` để xử lý `PlayerException`, ví dụ, hiển thị thông báo lỗi qua `JOptionPane` như yêu cầu trong Lab 5.
+- **Ủy quyền ngoại lệ bằng throws**: Thêm `throws PlayerException` vào chữ ký của phương thức chứa lời gọi `play()`, để chuyển trách nhiệm xử lý lên cấp cao hơn trong chương trình, chẳng hạn lên phương thức `main()`.
+
+Nếu bạn không cập nhật lớp `Aims` để bắt hoặc ủy quyền `PlayerException`, chương trình của bạn **sẽ không biên dịch được**. Trình biên dịch sẽ phát hiện ra rằng phương thức `play()` có thể ném `PlayerException`, và sẽ báo lỗi yêu cầu bạn phải xử lý hoặc khai báo ngoại lệ này. Ví dụ, nếu bạn để nguyên đoạn code trong `Aims.java` mà không thêm try-catch hoặc `throws`, bạn sẽ nhận được thông báo lỗi như sau:  
+```
+error: unreported exception PlayerException; must be caught or declared to be thrown
+```
+Điều này xảy ra vì trình biên dịch kiểm tra chặt chẽ các ngoại lệ checked để đảm bảo chương trình được viết một cách an toàn và có khả năng xử lý lỗi.
+
+Ngược lại, nếu `PlayerException` là một **unchecked exception** (kế thừa từ `RuntimeException`, chẳng hạn như `NullPointerException`), tình huống sẽ khác. Trong trường hợp đó, chương trình của bạn vẫn có thể biên dịch được ngay cả khi không có xử lý ngoại lệ. Tuy nhiên, nếu ngoại lệ xảy ra trong quá trình chạy (runtime) và không có khối `catch` nào ở cấp cao hơn để bắt nó (ví dụ, trong một phương thức gọi `main()` không có try-catch), chương trình sẽ dừng đột ngột. Khi đó, bạn sẽ thấy một **stack trace** (dấu vết ngăn xếp) được in ra console, mô tả chi tiết nơi ngoại lệ xảy ra, chẳng hạn:  
+```
+Exception in thread "main" hust.soict.hedspi.aims.exception.PlayerException: ERROR: DVD length is non-positive!
+    at hust.soict.hedspi.aims.media.DigitalVideoDisc.play(DigitalVideoDisc.java:...)
+    at hust.soict.hedspi.aims.Aims.main(Aims.java:...)
+```
+Tuy nhiên, điều này không cung cấp phản hồi thân thiện cho người dùng và làm gián đoạn trải nghiệm ứng dụng.
+
+Trong trường hợp của chúng ta, vì `PlayerException` là một **checked exception**, bạn **bắt buộc phải xử lý nó** tại mọi điểm gọi `play()`. Điều này không chỉ đảm bảo chương trình biên dịch thành công mà còn giúp duy trì tính ổn định, đặc biệt khi tích hợp với giao diện GUI. Ví dụ, khi người dùng nhấn nút "Play" trong `ItemController`, nếu không có try-catch, ứng dụng sẽ gặp lỗi và có thể đóng đột ngột. Ngược lại, với việc bắt ngoại lệ, bạn có thể hiển thị một dialog lỗi qua `JOptionPane`, chẳng hạn: "Error: DVD length is non-positive!" vào lúc 01:16 PM +07 ngày 24/05/2025, giúp người dùng hiểu vấn đề và tiếp tục sử dụng ứng dụng.
